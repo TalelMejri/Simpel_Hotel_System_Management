@@ -18,10 +18,15 @@
             <span
               v-for="k in star"
               :key="k.id"
-              class="h5 mb-0 font-weight-bold text-gray-800"
+              class="h5 mb-0 font-weight-bold text-gray-800 pt-3"
             >
-              <i class="material-icons mx-2">Star</i>
+              <img
+                class="text-warning"
+                src="../assets/images/star_black_24dp.svg"
+                alt=""
+              />
             </span>
+            <div class="pt-4">Prix : {{ prix }}</div>
           </div>
           <div class="col-auto">
             <div
@@ -39,6 +44,16 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row text-center mx-5 mt-2">
+      <button
+        :class="{ disabled: !plein }"
+        style="font-size: 25px"
+        @click="add_personne()"
+        class="col-md-12 btn btn-outline-success mx-1 px-2 rounded"
+      >
+        Panier
+      </button>
     </div>
   </div>
 </template>
@@ -58,6 +73,9 @@ export default {
     updateselect(index) {
       this.select = index;
     },
+    add_personne() {
+      this.$emit("add_personne", this.select);
+    },
   },
   computed: {
     image() {
@@ -72,6 +90,12 @@ export default {
     nbr_vide() {
       return this.hotels[this.select].nbr_valide;
     },
+    plein() {
+      return this.hotels[this.select].nbr_valide > 0 ? true : false;
+    },
+    prix() {
+      return this.hotels[this.select].prix;
+    },
   },
 };
 </script>
@@ -83,5 +107,8 @@ export default {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.disabled {
+  cursor: not-allowed;
 }
 </style>

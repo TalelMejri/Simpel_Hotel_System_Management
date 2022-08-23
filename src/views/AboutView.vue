@@ -1,6 +1,9 @@
 <template>
   <div class="about">
-    <DisaplayHotel :hotels="hotels"></DisaplayHotel>
+    <DisaplayHotel
+      :hotels="hotels"
+      @add_personne="add_personne"
+    ></DisaplayHotel>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ export default {
           star: 5,
           nbr_valide: 8,
           image: "../public/logo.png",
+          prix: 2000,
         },
         {
           id: 1,
@@ -28,6 +32,7 @@ export default {
           chambre: 50,
           nbr_valide: 11,
           image: "../assets/logo.png",
+          prix: 1500,
         },
         {
           id: 2,
@@ -36,6 +41,7 @@ export default {
           chambre: 20,
           nbr_valide: 11,
           image: "../assets/logo.png",
+          prix: 1000,
         },
         {
           id: 3,
@@ -44,9 +50,15 @@ export default {
           chambre: 20,
           nbr_valide: 0,
           image: "../assets/logo.png",
+          prix: 1800,
         },
       ],
     };
+  },
+  methods: {
+    add_personne(index) {
+      this.hotels[index].nbr_valide += 1;
+    },
   },
 };
 </script>

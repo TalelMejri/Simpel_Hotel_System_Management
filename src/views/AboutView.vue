@@ -17,7 +17,7 @@ export default {
         {
           id: 0,
           name: "hamamet",
-          star: 4,
+          star: 5,
           nbr_valide: 8,
           image: "../public/logo.png",
         },
@@ -40,7 +40,7 @@ export default {
         {
           id: 3,
           name: "sousse",
-          star: 4,
+          star: 3,
           chambre: 20,
           nbr_valide: 0,
           image: "../assets/logo.png",
@@ -50,3 +50,7 @@ export default {
   },
 };
 </script>
+
+<style>
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+</style>

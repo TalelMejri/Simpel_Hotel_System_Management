@@ -20,7 +20,7 @@
               :key="k.id"
               class="h5 mb-0 font-weight-bold text-gray-800"
             >
-              og
+              <i class="material-icons mx-2">Star</i>
             </span>
           </div>
           <div class="col-auto">
@@ -77,6 +77,7 @@ export default {
 </script>
 
 <style scoped>
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 #hotel {
   position: absolute;
   top: 40%;

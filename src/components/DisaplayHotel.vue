@@ -4,14 +4,39 @@
       <div class="card-body">
         <div class="row align-items-center">
           <div class="col mr-2">
+            <div>
+              <img :src="image" />
+            </div>
             <div
               class="text-xs font-weight-bold text-primary text-uppercase mb-1"
             >
-              nombre of all the books
+              {{ name }}
+              <div :class="nbr_vide > 0 ? 'text-succes' : 'text-danger'">
+                nombre Vide : {{ nbr_vide > 0 ? nbr_vide : "complet" }}
+              </div>
             </div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">dddd</div>
+            <span
+              v-for="k in star"
+              :key="k.id"
+              class="h5 mb-0 font-weight-bold text-gray-800"
+            >
+              og
+            </span>
           </div>
-          <div class="col-auto"></div>
+          <div class="col-auto">
+            <div
+              style="cursor: pointer"
+              v-for="(hotel, index) in hotels"
+              :key="hotel.id"
+              @click="updateselect(index)"
+            >
+              <p>
+                <button class="btn btn-outline-primary">
+                  {{ hotel.name }}
+                </button>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,6 +68,9 @@ export default {
     },
     star() {
       return this.hotels[this.select].star;
+    },
+    nbr_vide() {
+      return this.hotels[this.select].nbr_valide;
     },
   },
 };

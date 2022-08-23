@@ -18,7 +18,8 @@ export default {
           id: 0,
           name: "hamamet",
           star: 4,
-          image: "../assets/logo.png",
+          nbr_valide: 8,
+          image: "../public/logo.png",
         },
         {
           id: 1,

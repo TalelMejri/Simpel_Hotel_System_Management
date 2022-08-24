@@ -75,7 +75,7 @@
             <div>
               <img
                 :class="{ dispbledimgae: !plein }"
-                src="../../public/hammamet.png"
+                :src="image"
                 width="100%"
               />
             </div>

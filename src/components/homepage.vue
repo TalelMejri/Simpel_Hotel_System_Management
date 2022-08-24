@@ -3,11 +3,7 @@
     <div class="my-5 py-5 text-center">
       <div class="row py-5 mt-3">
         <div class="col-md-4">
-          <img
-            src="../assets/accounts _ user, users, profile, account, man, people, website, browser, webpage@2x.png"
-            width="70%"
-            alt=""
-          />
+          <img src="../assets/accounts.png" width="70%" alt="" />
         </div>
         <div class="col-md-4 py-2">
           <div class="card shadow p-1">

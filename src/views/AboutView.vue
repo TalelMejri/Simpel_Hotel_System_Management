@@ -25,7 +25,7 @@ export default {
           client: 0,
           max_persone: 50,
           chambre: 50,
-          image: "../../public/logo.png",
+          image: "/logo.png",
           prix: 2000,
         },
         {
@@ -36,7 +36,7 @@ export default {
           max_persone: 40,
           nbr_valide: 11,
           client: 0,
-          image: "../../public/logo.png",
+          image: "/logo.png",
           prix: 1500,
         },
         {
@@ -47,7 +47,7 @@ export default {
           client: 0,
           chambre: 30,
           nbr_valide: 11,
-          image: "../../public/logo.png",
+          image: "/logo.png",
           prix: 1000,
         },
         {
@@ -58,7 +58,7 @@ export default {
           chambre: 30,
           max_persone: 30,
           nbr_valide: 1,
-          image: "../../public/logo.png",
+          image: "/logo.png",
           prix: 1800,
         },
       ],

@@ -3,17 +3,14 @@
     <div class="col-xl-10 col-md-12 col-lg-12 py-4">
       <div class="row shadow-lg rounded">
         <div class="col-lg-6 d-none d-lg-block bg-secondary">
-          <img
-            src="../assets/accounts _ user, users, profile, account, man, people, website, browser, webpage@2x.png"
-            width="500px"
-            alt=""
-          />
+          <img src="../assets/accounts.png" width="500px" alt="" />
         </div>
         <div class="col-lg-6 p-1">
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
           </div>
           <form @submit.prevent="Onsubmit">
+            <font-awesome-icon icon="fa-solid fa-book" />
             <div class="mb-2">
               <input
                 type="text"

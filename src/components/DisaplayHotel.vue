@@ -7,12 +7,13 @@
       >
         <!-- Button trigger modal -->
         <button
+          :disabled="client == 0"
           type="button"
-          class="btn btn-primary"
+          class="btn btn-outline-primary"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Launch demo modal
+          magasin
         </button>
 
         <!-- Modal -->
@@ -26,7 +27,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">All Shop</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -34,7 +35,24 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">...</div>
+              <div class="modal-body">
+                <div
+                  v-for="hotel in hotels"
+                  :key="hotel.id"
+                  class="card shadow"
+                >
+                  <div v-if="hotel.client > 0">
+                    <div class="card-header">
+                      {{ hotel.name }}
+                    </div>
+                    <div class="card-body">
+                      Personne :{{ hotel.client }} <br />
+                      Prix :{{ hotel.client * hotel.prix }}
+                    </div>
+                  </div>
+                </div>
+                Prix Total {{ prix_total }}
+              </div>
               <div class="modal-footer">
                 <button
                   type="button"
@@ -224,6 +242,6 @@ export default {
   filter: grayscale(1000);
 }
 .modal {
-  z-index: 1;
+  z-index: 10000;
 }
 </style>

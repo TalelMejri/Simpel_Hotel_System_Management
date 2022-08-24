@@ -1,14 +1,19 @@
 <template>
   <div class="py-5 mt-5" id="hotel">
-    <div class="card border-left-red shadow h-100 py-2">
+    <div class="card border-left-red shadow h-100 py-2 mt-5">
       <div class="card-body">
         <div class="row align-items-center">
-          <div class="col mr-2">
+          <div class="col mr-5 mx-2">
             <div>
-              <img :src="image" />
+              <img src="../../public/hammamet.png" width="100%" />
             </div>
             <div
-              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+              class="
+                text-xs text-center
+                font-weight-bold
+                text-primary text-uppercase
+                mb-1
+              "
             >
               {{ name }}
               <div :class="nbr_vide > 0 ? 'text-succes' : 'text-danger'">
@@ -18,29 +23,37 @@
             <span
               v-for="k in star"
               :key="k.id"
-              class="h5 mb-0 font-weight-bold text-gray-800 pt-3"
+              class="
+                h5
+                mb-0
+                font-weight-bold
+                mx-4
+                text-gray-800
+                pt-3
+                text-center
+              "
             >
               <img
-                class="text-warning"
+                class="text-warning mx-auto"
                 src="../assets/images/star_black_24dp.svg"
                 alt=""
               />
             </span>
-            <div class="pt-4">Prix : {{ prix }}</div>
+            <div class="pt-4 text-center">Prix : {{ prix }}</div>
           </div>
-          <div class="col-auto">
-            <div
+          <div class="col-md-4 mx-2 text-center">
+            <span
               style="cursor: pointer"
               v-for="(hotel, index) in hotels"
               :key="hotel.id"
               @click="updateselect(index)"
             >
-              <p>
+              <p class="text-center">
                 <button class="btn btn-outline-primary">
                   {{ hotel.name }}
                 </button>
               </p>
-            </div>
+            </span>
           </div>
         </div>
       </div>

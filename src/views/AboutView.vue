@@ -22,7 +22,7 @@ export default {
           name: "hamamet",
           star: 5,
           nbr_valide: 8,
-          image: "../public/logo.png",
+          image: "../../public/logo.png",
           prix: 2000,
         },
         {
@@ -31,7 +31,7 @@ export default {
           star: 4,
           chambre: 50,
           nbr_valide: 11,
-          image: "../assets/logo.png",
+          image: "../../public/logo.png",
           prix: 1500,
         },
         {
@@ -40,7 +40,7 @@ export default {
           star: 4,
           chambre: 20,
           nbr_valide: 11,
-          image: "../assets/logo.png",
+          image: "../../public/logo.png",
           prix: 1000,
         },
         {
@@ -49,7 +49,7 @@ export default {
           star: 3,
           chambre: 20,
           nbr_valide: 0,
-          image: "../assets/logo.png",
+          image: "../../public/logo.png",
           prix: 1800,
         },
       ],

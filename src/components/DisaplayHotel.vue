@@ -87,8 +87,6 @@
                 mb-1
               "
             >
-              {{ client }}
-              {{ prix_total }}
               {{ name }}
               <div :class="nbr_vide > 0 ? 'text-succes' : 'text-danger'">
                 nombre Vide : {{ nbr_vide > 0 ? nbr_vide : "complet" }}

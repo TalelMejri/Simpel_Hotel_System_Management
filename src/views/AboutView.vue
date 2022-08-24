@@ -53,7 +53,7 @@ export default {
           star: 3,
           chambre: 30,
           max_persone: 30,
-          nbr_valide: 0,
+          nbr_valide: 1,
           image: "../../public/logo.png",
           prix: 1800,
         },

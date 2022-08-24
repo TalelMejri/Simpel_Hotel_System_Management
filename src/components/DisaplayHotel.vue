@@ -5,7 +5,11 @@
         <div class="row align-items-center">
           <div class="col mr-5 mx-2">
             <div>
-              <img src="../../public/hammamet.png" width="100%" />
+              <img
+                :class="{ dispbledimgae: !plein }"
+                src="../../public/hammamet.png"
+                width="100%"
+              />
             </div>
             <div
               class="
@@ -123,5 +127,8 @@ export default {
 }
 .disabled {
   cursor: not-allowed;
+}
+.dispbledimgae {
+  filter: grayscale(1000);
 }
 </style>

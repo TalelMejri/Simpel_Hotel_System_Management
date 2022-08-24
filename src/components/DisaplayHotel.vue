@@ -43,7 +43,26 @@
                 alt=""
               />
             </span>
-            <div class="pt-4 text-center">Prix : {{ prix }}</div>
+            <div class="pt-4 text-center row">
+              <p class="col-md-4">
+                <button type="button" class="btn btn-warning">
+                  Prix :<br />
+                  <span class="badge bg-info">{{ prix }}</span>
+                </button>
+              </p>
+              <p class="col-md-3">
+                <button type="button" class="btn btn-primary">
+                  Chambre :
+                  <span class="badge bg-info">{{ Chambre }}</span>
+                </button>
+              </p>
+              <p class="col-md-4">
+                <button type="button" class="btn btn-success">
+                  Max personne :
+                  <span class="badge bg-info">{{ max_persone }}</span>
+                </button>
+              </p>
+            </div>
           </div>
           <div class="col-md-4 mx-2 text-center">
             <span
@@ -112,6 +131,12 @@ export default {
     },
     prix() {
       return this.hotels[this.select].prix;
+    },
+    max_persone() {
+      return this.hotels[this.select].max_persone;
+    },
+    Chambre() {
+      return this.hotels[this.select].chambre;
     },
   },
 };

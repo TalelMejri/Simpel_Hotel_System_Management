@@ -22,6 +22,8 @@ export default {
           name: "hamamet",
           star: 5,
           nbr_valide: 8,
+          max_persone: 50,
+          chambre: 50,
           image: "../../public/logo.png",
           prix: 2000,
         },
@@ -29,7 +31,8 @@ export default {
           id: 1,
           name: "gammaret",
           star: 4,
-          chambre: 50,
+          chambre: 40,
+          max_persone: 40,
           nbr_valide: 11,
           image: "../../public/logo.png",
           prix: 1500,
@@ -38,7 +41,8 @@ export default {
           id: 2,
           name: "tbarka",
           star: 4,
-          chambre: 20,
+          max_persone: 30,
+          chambre: 30,
           nbr_valide: 11,
           image: "../../public/logo.png",
           prix: 1000,
@@ -47,7 +51,8 @@ export default {
           id: 3,
           name: "sousse",
           star: 3,
-          chambre: 20,
+          chambre: 30,
+          max_persone: 30,
           nbr_valide: 0,
           image: "../../public/logo.png",
           prix: 1800,
@@ -57,7 +62,7 @@ export default {
   },
   methods: {
     add_personne(index) {
-      this.hotels[index].nbr_valide += 1;
+      this.hotels[index].nbr_valide -= 1;
     },
   },
 };

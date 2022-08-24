@@ -1,6 +1,56 @@
 <template>
   <div class="py-5 mt-5" id="hotel">
     <div class="card border-left-red shadow h-100 py-2 mt-5">
+      <div
+        style="margin-left: 40rem; margin-top: 35px"
+        class="position-absolute"
+      >
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="card-body">
         <div class="row align-items-center">
           <div class="col mr-5 mx-2">
@@ -19,6 +69,8 @@
                 mb-1
               "
             >
+              {{ client }}
+              {{ prix_total }}
               {{ name }}
               <div :class="nbr_vide > 0 ? 'text-succes' : 'text-danger'">
                 nombre Vide : {{ nbr_vide > 0 ? nbr_vide : "complet" }}
@@ -64,6 +116,7 @@
               </p>
             </div>
           </div>
+
           <div class="col-md-4 mx-2 text-center">
             <span
               style="cursor: pointer"
@@ -138,6 +191,20 @@ export default {
     Chambre() {
       return this.hotels[this.select].chambre;
     },
+    client() {
+      let count = 0;
+      this.hotels.forEach((h) => {
+        count += h.client;
+      });
+      return count;
+    },
+    prix_total() {
+      let price = 0;
+      this.hotels.forEach((h) => {
+        price += h.client * h.prix;
+      });
+      return price;
+    },
   },
 };
 </script>
@@ -155,5 +222,8 @@ export default {
 }
 .dispbledimgae {
   filter: grayscale(1000);
+}
+.modal {
+  z-index: 1;
 }
 </style>

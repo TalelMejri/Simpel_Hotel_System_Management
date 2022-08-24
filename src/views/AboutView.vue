@@ -22,6 +22,7 @@ export default {
           name: "hamamet",
           star: 5,
           nbr_valide: 8,
+          client: 0,
           max_persone: 50,
           chambre: 50,
           image: "../../public/logo.png",
@@ -34,6 +35,7 @@ export default {
           chambre: 40,
           max_persone: 40,
           nbr_valide: 11,
+          client: 0,
           image: "../../public/logo.png",
           prix: 1500,
         },
@@ -42,6 +44,7 @@ export default {
           name: "tbarka",
           star: 4,
           max_persone: 30,
+          client: 0,
           chambre: 30,
           nbr_valide: 11,
           image: "../../public/logo.png",
@@ -50,6 +53,7 @@ export default {
         {
           id: 3,
           name: "sousse",
+          client: 0,
           star: 3,
           chambre: 30,
           max_persone: 30,
@@ -63,6 +67,7 @@ export default {
   methods: {
     add_personne(index) {
       this.hotels[index].nbr_valide -= 1;
+      this.hotels[index].client += 1;
     },
   },
 };

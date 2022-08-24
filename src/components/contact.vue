@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex p-3 m-4 justify-content-center py-5">
-    <div class="col-xl-10 col-md-12 col-lg-12 py-5">
+  <div class="d-flex p-3 m-4 justify-content-center">
+    <div class="col-xl-10 col-md-12 col-lg-12 py-4">
       <div class="row shadow-lg rounded">
         <div class="col-lg-6 d-none d-lg-block bg-secondary">
           <img

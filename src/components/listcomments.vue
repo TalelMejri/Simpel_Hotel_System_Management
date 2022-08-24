@@ -57,7 +57,7 @@ export default {
 <style scoped>
 #comments {
   position: absolute;
-  margin-top: -44rem;
-  margin-left: 46rem;
+  margin-top: -40rem;
+  margin-left: 40rem;
 }
 </style>

@@ -66,7 +66,7 @@ export default {
   },
   data() {
     return {
-      select: 1,
+      select: 0,
     };
   },
   methods: {

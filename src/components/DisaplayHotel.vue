@@ -1,10 +1,7 @@
 <template>
   <div class="py-5 mt-5" id="hotel">
     <div class="card border-left-red shadow h-100 py-2 mt-5">
-      <div
-        style="margin-left: 40rem; margin-top: 35px"
-        class="position-absolute"
-      >
+      <div style="margin-left: 70%" class="position-absolute float-right">
         <!-- Button trigger modal -->
         <button
           :disabled="client == 0"
@@ -76,7 +73,7 @@
               <img
                 :class="{ dispbledimgae: !plein }"
                 :src="image"
-                width="100%"
+                width="80%"
               />
             </div>
             <div
@@ -238,8 +235,5 @@ export default {
 }
 .dispbledimgae {
   filter: grayscale(1000);
-}
-.modal {
-  z-index: 10000;
 }
 </style>

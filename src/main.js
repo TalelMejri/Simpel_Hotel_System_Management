@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/js/dist/offcanvas";
 import "bootstrap/js/dist/alert";
 import "bootstrap/js/dist/modal";
+import "bootstrap/js/dist/dropdown";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone, faBook } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";

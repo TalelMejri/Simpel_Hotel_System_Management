@@ -25,7 +25,7 @@ export default {
           client: 0,
           max_persone: 50,
           chambre: 50,
-          image: "/logo.png",
+          image: "/hammamet.png",
           prix: 2000,
         },
         {
@@ -36,7 +36,7 @@ export default {
           max_persone: 40,
           nbr_valide: 11,
           client: 0,
-          image: "/logo.png",
+          image: "/h=gamaaret.png",
           prix: 1500,
         },
         {
@@ -47,7 +47,7 @@ export default {
           client: 0,
           chambre: 30,
           nbr_valide: 11,
-          image: "/logo.png",
+          image: "/tbarka.jpg",
           prix: 1000,
         },
         {
@@ -58,7 +58,7 @@ export default {
           chambre: 30,
           max_persone: 30,
           nbr_valide: 1,
-          image: "/logo.png",
+          image: "/sousse.jpg",
           prix: 1800,
         },
       ],

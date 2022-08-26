@@ -10,7 +10,7 @@
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
           </div>
           <form @submit.prevent="Onsubmit">
-            <font-awesome-icon icon="fa-solid fa-book" />
+          <!--  <font-awesome-icon icon="fa-solid fa-book" />-->
             <div class="mb-2">
               <input
                 type="text"

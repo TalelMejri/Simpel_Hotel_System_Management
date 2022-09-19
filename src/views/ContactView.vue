@@ -1,7 +1,7 @@
 <template>
     <div class="py-5">   
-        <contact :tabcomments="tabcomments" @addcomment="addcomment"></contact>
-         <listcomments :tabcomments="tabcomments"></listcomments>
+          <contact :tabcomments="tabcomments"  @addcomment="addcomment" @badvalue="badvalue" :showtoast:="showtoast"></contact>
+          <listcomments :tabcomments="tabcomments"></listcomments>
     </div>
 </template>
 
@@ -15,12 +15,17 @@
         },
         data(){
             return{
-                tabcomments:[]
+                tabcomments:[],
+                showtoast:false
             }
         },
         methods:{
             addcomment(review){
                 this.tabcomments.push(review);
+            },
+            badvalue(){
+                this.showtoast=true;
+                setTimeout(()=>this.showtoast=false,3000)
             }
         }
     }

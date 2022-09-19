@@ -8,6 +8,7 @@
         <div class="col-lg-6 p-1">
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
+            <toast v-if="showtoast"></toast>
           </div>
           <form @submit.prevent="Onsubmit">
           <!--  <font-awesome-icon icon="fa-solid fa-book" />-->
@@ -53,6 +54,7 @@
 </template>
 
 <script>
+import toast from "@/components/toast.vue";
 export default {
   name: "contact-vue",
   data() {
@@ -64,12 +66,19 @@ export default {
   },
   props: {
     tabcomments: Array,
+    showtoast:Boolean
+  },
+  components:{
+    toast
   },
   methods: {
     Onsubmit() {
       if (this.name == "" && this.email == "" && this.message == "") {
-        alert("all field empty");
-      }
+        this.showtoast=true;
+        this.$emit("badvalue");
+      }else{
+
+      
       let comment = {
         name: this.name,
         email: this.email,
@@ -80,6 +89,7 @@ export default {
       this.name = "";
       this.email = "";
       this.message = "";
+    }
     },
   },
 };

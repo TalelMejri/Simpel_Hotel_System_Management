@@ -116,7 +116,7 @@ export default {
 
 .fade-enter-active{
   /*transition: all 0.3s ease;*/
-  transition: animate 0.8s ease;
+  transition: animate 0.8s ease-in;
 }
 
 .fade-leave-from{
@@ -133,8 +133,8 @@ export default {
   transition: all 0.3s ease;
 }
 @keyframes animate {
-  0%{opacity: 0;transform: translateY(-60px);}
-  50%{opacity: 1;transform: translateY(0);}
+  0%{transform: translateY(-60px);opacity: 0}
+  50%{transform: translateY(0);opacity: 1;}
   60%{transform:translateX(8px)}
   70%{transform:translateX(-8px)}
   80%{transform:translateX(4px)}

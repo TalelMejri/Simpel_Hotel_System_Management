@@ -1,15 +1,21 @@
 <template>
   <div class="d-flex p-3 m-4 justify-content-center">
+   
     <div class="col-xl-10 col-md-12 col-lg-12 py-4">
       <div class="row shadow-lg rounded">
         <div class="col-lg-6 d-none d-lg-block bg-secondary">
+        
           <img src="../assets/accounts.png" width="500px" alt="" />
         </div>
+      
         <div class="col-lg-6 p-1">
+          
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
-            <toast v-if="showtoast"></toast>
           </div>
+          <transition name="fade">
+            <toast v-if="showtoast"></toast>
+         </transition>
           <form @submit.prevent="Onsubmit">
           <!--  <font-awesome-icon icon="fa-solid fa-book" />-->
             <div class="mb-2">
@@ -62,6 +68,7 @@ export default {
       name: "",
       email: "",
       message: "",
+      showtalel:false
     };
   },
   props: {
@@ -94,3 +101,35 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.fade-enter-from{
+  opacity:0;
+  transform: translateY(-60px);
+}
+
+.fade-enter-to{
+  opacity:1;
+  transform: translateY(0);
+}
+
+.fade-enter-active{
+  transition: all 0.3s ease;
+}
+
+.fade-leave-from{
+  opacity:1;
+  transform: translateY(0);
+}
+
+.fade-leave-to{
+  opacity:0;
+  transform: translateY(-60px);
+}
+
+.fade-leave-active{
+  transition: all 0.3s ease;
+}
+
+</style>

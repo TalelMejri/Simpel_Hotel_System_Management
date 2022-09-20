@@ -7,7 +7,16 @@
         </div>
         <div class="col-md-4 py-2">
           <div class="card shadow p-1">
-            <div class="card-header">Our Hotel</div>
+          
+            <div class="card-header">
+              <transition appear
+              @before-enter="beforeEnter"
+              @enter="enter">
+                <h1>  Our Hotel</h1>
+               
+              </transition>
+            </div>
+     
             <p class="text-muted p-5">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore,
               vitae.
@@ -34,9 +43,14 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
   name: "homepage",
-};
+  methods:{
+     
+    },
+  }
+
 </script>
 
 <style>

@@ -69,13 +69,18 @@
       <div class="card-body">
         <div class="row align-items-center">
           <div class="col mr-5 mx-2">
+         
             <div>
+            
               <img
                 :class="{ dispbledimgae: !plein }"
                 :src="image"
                 width="80%"
               />
+         
             </div>
+         
+        
             <div
               class="
                 text-xs text-center
@@ -89,6 +94,7 @@
                 nombre Vide : {{ nbr_vide > 0 ? nbr_vide : "complet" }}
               </div>
             </div>
+        
             <span
               v-for="k in star"
               :key="k.id"
@@ -235,5 +241,30 @@ export default {
 }
 .dispbledimgae {
   filter: grayscale(1000);
+}    
+/*.fade-enter-from{
+ opacity: 0;
+ transform: scale(0.6);
 }
+.fade-enter-to{
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-enter-active{
+  transition: all 0.3s ease;
+}
+
+.fade-leave-from{
+  opacity: 1;
+  transform: scale(1);
+ }
+ .fade-leave-to{
+   opacity: 0;
+   transform: scale(0.6);
+ }
+ .fade-leave-active{
+   transition: all 0.3s ease;
+ }
+ .fade-move{  transition: all 0.3s ease;}
+ */
 </style>

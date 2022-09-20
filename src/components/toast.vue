@@ -15,7 +15,8 @@
 <style>
     .toast_wrapper{
         width: 100%;
-        top: 20px;
+        top: -140px;
+        position: absolute;
     }
     .toast_ee{
         padding: 20px;

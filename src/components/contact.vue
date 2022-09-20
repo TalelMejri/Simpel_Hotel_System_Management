@@ -12,10 +12,11 @@
           
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
+            <transition name="fade">
+              <toast class="mb-5 position-relative" v-if="showtoast"></toast>
+           </transition>
           </div>
-          <transition name="fade">
-            <toast v-if="showtoast"></toast>
-         </transition>
+        
           <form @submit.prevent="Onsubmit">
           <!--  <font-awesome-icon icon="fa-solid fa-book" />-->
             <div class="mb-2">
@@ -116,7 +117,7 @@ export default {
 
 .fade-enter-active{
   /*transition: all 0.3s ease;*/
-  transition: animate 0.8s ease-in;
+  transition: animate 0.8s ease;
 }
 
 .fade-leave-from{

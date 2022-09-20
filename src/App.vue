@@ -21,6 +21,10 @@
   }
 </script>
 <style>
+  #app{
+    overflow: hidden;
+    width: 100vw;
+  }
 .fade-enter,.fade-leave-to{
   opacity: 0;
   transform: translateX(2em);

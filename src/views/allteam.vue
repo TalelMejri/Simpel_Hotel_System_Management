@@ -49,13 +49,7 @@
                 delay:el.dataset.index * 0.2
               })
             }
-
-            /*const afterEnter=(el)=>{
-                console.log("after enter",el);
-             
-            }*/
-
-            return{beforeEnter,enter}//afterEnter}
+            return{beforeEnter,enter}
         },
 components:{
     phone

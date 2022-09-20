@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-        <preloder/>
+      <!--  <preloder/>-->
        <appheader></appheader>
        <transition name="fade" mode="out-in">
          <router-view/>
@@ -21,6 +21,7 @@
   }
 </script>
 <style>
+  @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
   #app{
     overflow: hidden;
     width: 100vw;

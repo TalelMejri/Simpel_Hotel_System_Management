@@ -31,6 +31,11 @@
                 ><router-link to="/contact">contact</router-link></a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><router-link to="/allteam">all team</router-link></a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -39,8 +44,10 @@
 </template>
 
 <script>
+
 export default {
   name: "appHeader",
+
 };
 </script>
 

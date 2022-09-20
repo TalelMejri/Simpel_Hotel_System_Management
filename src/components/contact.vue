@@ -12,7 +12,7 @@
           
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-5">Contact Us</h1>
-            <transition name="fade">
+            <transition name="fade" mode="out-in">
               <toast class="mb-5 position-relative" v-if="showtoast"></toast>
            </transition>
           </div>
@@ -105,35 +105,30 @@ export default {
 
 <style scoped>
 
-/*.fade-enter-from{
-  opacity:0;
+.fade-enter-from{
+  opacity: 0;
   transform: translateY(-60px);
 }
-
 .fade-enter-to{
-  opacity:1;
+  opacity: 1;
   transform: translateY(0);
-}*/
-
+}
 .fade-enter-active{
-  /*transition: all 0.3s ease;*/
-  transition: animate 0.8s ease;
+  transform: all .3s ease;
 }
 
 .fade-leave-from{
-  opacity:1;
+  opacity: 1;
   transform: translateY(0);
 }
-
 .fade-leave-to{
-  opacity:0;
+  opacity: 0;
   transform: translateY(-60px);
 }
-
 .fade-leave-active{
-  transition: all 0.3s ease;
-}
-@keyframes animate {
+    transform: all .3s ease;
+  }
+/*@keyframes animate {
   0%{transform: translateY(-60px);opacity: 0}
   50%{transform: translateY(0);opacity: 1;}
   60%{transform:translateX(8px)}
@@ -141,6 +136,6 @@ export default {
   80%{transform:translateX(4px)}
   90%{transform:translateX(-4px)}
   100%{transform:translateX(0)}
-}
+}*/
 
 </style>

@@ -16,7 +16,7 @@
             }
         },
         mounted(){
-           setTimeout(()=>this.isloaded=true,1000)
+           setTimeout(()=>this.isloaded=true,2000)
         }
     }
 </script>

@@ -66,7 +66,7 @@ export default {
   },
   methods: {
       translate(prop){
-        return (this[this.lang][prop]);
+         return(this[this.lang][prop]);
       }  
   },
 };

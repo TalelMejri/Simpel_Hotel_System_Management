@@ -25,7 +25,7 @@
             },
             badvalue(){
                 this.showtoast=true;
-                setTimeout(()=>this.showtoast=false,3000)
+                setTimeout(()=>this.showtoast=false,2000)
             }
         }
     }

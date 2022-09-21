@@ -73,7 +73,7 @@
             <div>
             
               <img
-                :class="{ dispbledimgae: !plein }"
+                :class="{ disabledimgae: !plein }"
                 :src="image"
                 width="80%"
               />
@@ -239,7 +239,7 @@ export default {
 .disabled {
   cursor: not-allowed;
 }
-.dispbledimgae {
+.disabledimgae {
   filter: grayscale(1000);
 }    
 /*.fade-enter-from{

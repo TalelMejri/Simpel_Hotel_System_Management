@@ -2,7 +2,7 @@
   <div id="appheader">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand mx-5" href="#">My Hotel</a>
+        <a class="navbar-brand mx-5" href="#">{{translate("Myhotel")}}</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -18,36 +18,57 @@
           <ul class="navbar-nav mx-4">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"
-                ><router-link to="/">Home</router-link></a
+                ><router-link to="/">{{translate("home")}}</router-link></a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><router-link to="/about">about</router-link></a
+                ><router-link to="/about">{{translate("about")}}</router-link></a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><router-link to="/contact">contact</router-link></a
+                ><router-link to="/contact">{{translate("contact")}}</router-link></a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><router-link to="/allteam">all team</router-link></a
+                ><router-link to="/allteam">{{translate("allteam")}}</router-link></a
               >
             </li>
           </ul>
+       
+
+        
         </div>
+        <span class="float-end mx-5">
+          <select name="language" v-model="lang">
+            <option value="ar" >arabic</option>
+            <option value="en" >anglais</option>
+          </select>
+         </span>
       </div>
+
     </nav>
   </div>
 </template>
 
 <script>
-
+import en from "@/languages/en.js";
+import ar from "@/languages/ar.js";
 export default {
   name: "appHeader",
-
+  mixins:[ar,en],
+  data(){
+    return{
+      lang:'ar'
+    }
+  },
+  methods: {
+      translate(prop){
+        return (this[this.lang][prop]);
+      }  
+  },
 };
 </script>
 

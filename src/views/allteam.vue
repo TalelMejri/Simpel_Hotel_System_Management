@@ -74,9 +74,9 @@ components:{
         box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
         cursor: pointer;
         line-height: 1.5em;
-       text-align: center;
+        text-align: center;
     }
-    .list-enter-from{
+  /*  .list-enter-from{
         opacity: 0;
         transform:translateY(-60px) ;
     }
@@ -86,6 +86,6 @@ components:{
     }
     .list-enter-active{
         transition: all 0.3s ease;
-    }
+    }*/
   
 </style>
